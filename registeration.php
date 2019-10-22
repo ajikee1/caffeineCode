@@ -49,14 +49,14 @@ include 'dbConnection.php';
 
         $dbConnection = mysqli_connect($servername, $username, $password, $db);
         $statement = $dbConnection->prepare("insert into customerDetails (firstName, lastName, street, county, state, zip, email) values (?, ?, ?, ?, ?, ?, ?)");
-        $statement -> bind_param("sssssis" , $fName, $lName, $st, $count, $statecd, $postCode, $emailAddress);
+        $statement -> bind_param("sssssis" , $fName, $lName, $streetName, $countyName, $stateCode, $postalCode, $emailAddress);
 
         $fName = $firstName;
         $lName = $lastName;
-        $st = $street;
-        $count = $county;
-        $statecd = $state;
-        $postCode = $zip;
+        $streetName = $street;
+        $countyName = $county;
+        $stateCode = $state;
+        $postalCode = $zip;
         $emailAddress = $email;
 
         $statement -> execute();
