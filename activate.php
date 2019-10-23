@@ -2,17 +2,18 @@
 
 include 'dbConnection.php';
 
-/*
+
 if (isset($_POST['registeredEmail'])) {
     $registeredEmail = $_POST["registeredEmail"];
 }
 
 if (isset($_POST['activationCode'])) {
     $activationCode = $_POST["activationCode"];
-} */
+}
 
+/*
 $registeredEmail ='ajikee1@umbc.edu';
-$activationCode = '89788';
+$activationCode = '89788'; */
 
 //call the login function
 activate($servername, $username,$password, $db, $registeredEmail, $activationCode);
