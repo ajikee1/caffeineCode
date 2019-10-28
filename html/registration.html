@@ -69,7 +69,7 @@
     $("#registration").submit(function(event)
     {
         event.preventDefault();
-        var post_url = "../registeration.php";
+        var post_url = "../registration.php";
         var form_data = $(this).serialize(); //Encode form elements for submission
         $.post( post_url, form_data, function(response)
         {
