@@ -5,7 +5,16 @@ include 'dbConnection.php';
 $status = uploadProduct($servername, $username,$password, $db);
 echo $status;
 
-//CREATE TABLE `caffeineDB`.`products` ( `productId` INT NOT NULL AUTO_INCREMENT , `productName` VARCHAR(50) NOT NULL , `productPrice` DOUBLE(5,2) NOT NULL , `stock` INT(5) NOT NULL , `productDescription` VARCHAR(200) NOT NULL , `productImage` VARCHAR(300) NOT NULL , PRIMARY KEY (`productId`(5))) ENGINE = InnoDB;
+/*CREATE TABLE `products` (
+`productId` int(3) NOT NULL,
+  `productName` varchar(50) NOT NULL,
+  `productPrice` double(5,2) NOT NULL,
+  `stock` int(5) NOT NULL,
+  `productDescription` varchar(100) NOT NULL,
+  `productImage` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1; */
+
+
 function uploadProduct($servername, $username,$password, $db)
 {
     $dbConnection = mysqli_connect($servername, $username, $password, $db);
